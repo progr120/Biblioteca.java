@@ -45,7 +45,6 @@ public class Funzioni {
     public static int leggiNumero() {
         return leggiNumero("Scrive un numero: ");
     }
-
     @SuppressWarnings("resource")
     public static int leggiNumero(String msg) {
         System.out.println(msg);

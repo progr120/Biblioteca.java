@@ -1,25 +1,34 @@
 /*
- * Scrivere un programma che dati due array di interi in input dica se sono uguali
+ * Scrivere un programma che dati due array di interi in input se sono uguali
  */
 
 package array;
 
-import java.util.Scanner;
-
 public class Esercizio1 {
-
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-        int Array1[] = { 1, 15, 22 };
-        int Array2[] = { 1, 15, 22 };
+        int[] array1 = { 1, 2, 3, 4, 5 };
+        int[] array2 = { 1, 2, 3, 4, 5 };
 
-        while (true) {
-            if (Array1 [0] == Array2 [0]) {
-            }    
-            if (Array1 [1] == Array2 [1]){
+        // Verifica se array ha una dimensione uguale
+        if (array1.length != array2.length) {
+            System.out.println("Gli array hanno dimensioni diverse.");
+            return;
+        }
+
+        // Confronto dei due array
+        boolean sonoUguali = true;
+        for (int i = 0; i < array1.length; i++) {
+            if (array1[i] != array2[i]) {
+                sonoUguali = false;
+                break;
             }
-            if (Array1 [2] == Array2 [2]) {
-            }     
-        } 
+        }
+
+        // Messaggo basati sul risultato del confronto
+        if (sonoUguali) {
+            System.out.println("Gli array sono uguali.");
+        } else {
+            System.out.println("Gli array sono diversi.");
+        }
     }
 }

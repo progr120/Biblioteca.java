@@ -1,0 +1,40 @@
+-------------- Domanda Esercizio 2 --------------
+
+Follow-Up Questions:
+1. What function call would you make to fill data with the constant 13?
+2. What function call would you make to fill data with 0, 1, 2, 3, ...?
+3. What function call would you make to fill data with 1, 2, 3, 4, ...?
+4. What function call would you make to fill data with 1, 3, 5, 7, ...?
+5. What function call would you make to fill data with N, N-1, N-2, ..., 3, 2, 1 where N is the
+length of the array data?
+
+Risoluzione:
+
+1- Con questo elemento torna array 13:
+
+Arrays.fill(data, 13);
+
+2- Inizia a mettere i = 0, e dopo meti la data[i], come dentro for ha un i++ per volta aumenta i + 1, riempiendo array con valori sequenziali
+
+for (int i = 0; i < data.length; i++) {
+    data[i] = i;
+}
+
+3- Questo è uguale al precedente, ma con l'aggiunta di data[i] i + 1; iniziando la sequenza array con 1
+
+for (int i = 0; i < data.length; i++) {
+    data[i] = i + 1;
+}
+
+4-  Per rendere il numero sempre dispari, si crea un valore = 1, quindi utilizziamo il metodo for per creare un metodo che riempirà array, 
+  arriviamo al perché valore = 1, perché ora aggiungiamo +2 a questo valore, quindi il risultato è sempre dispari nella variabile.
+
+int value = 1;
+for (int i = 0; i < data.length; i++) {
+    data[i] = value;
+    value += 2;
+}
+
+5- 
+
+

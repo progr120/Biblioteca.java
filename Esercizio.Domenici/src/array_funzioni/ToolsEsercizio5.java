@@ -76,7 +76,7 @@ public class ToolsEsercizio5 {
         }
         int i = low;
         int j = mid + 1;
-        int k = low;
+        int k = 0; // Correção aqui
         while (i <= mid && j <= high) {
             if (temp[i] <= temp[j]) {
                 data[k] = temp[i];

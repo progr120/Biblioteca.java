@@ -4,20 +4,20 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-class Library {
-
+public class Library {
     public static void main(String[] args) {
-            Library lib = new Library();
-            Book a = new Book("a"), b = new Book("b"), c = new Book("c");
-    
-            System.out.println(lib.addBook(a));
-            System.out.println(lib.addBook(b));
-            System.out.println(lib.addBook(c));
-            System.out.println(lib.addBook(a));
-            System.out.println(lib.loanBook(b));
-            System.out.println(lib.loanBook(a));
-            lib.printLoans();
-        }
+        Library lib = new Library();
+        Book a = new Book("a"), b = new Book("b"), c = new Book("c");
+
+        System.out.println(lib.addBook(a));
+        System.out.println(lib.addBook(b));
+        System.out.println(lib.addBook(c));
+        System.out.println(lib.addBook(a));
+        System.out.println(lib.loanBook(b));
+        System.out.println(lib.loanBook(a));
+        lib.printLoans();
+    }
+
     private List<Book> books;
 
     public Library() {

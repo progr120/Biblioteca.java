@@ -22,9 +22,7 @@ public class Cellphone {
     public static void setCost(String gestore1, String gestore2, double costoAlMinuto) {
         Costochiamata nuovoCosto = new Costochiamata(gestore1, gestore2, costoAlMinuto);
         for (Costochiamata costo : costiChiamate) {
-            if (costo.getGestore1().equals(gestore1)) {
-                costo.setCostoAlMinuto(costoAlMinuto);
-            } else if (costo.getGestore2().equals(gestore2)) {
+            if (costo.getGestore1().equals(gestore1) && costo.getGestore2().equals(gestore2)) {
                 costo.setCostoAlMinuto(costoAlMinuto);
             }
         }
@@ -50,6 +48,6 @@ public class Cellphone {
         Cellphone.setCost("Megafon", "TIMMY", 0.25);
         System.out.println(a.getCost(b, 10));
         System.out.println(b.getCost(a, 8));
-        System.out.println(a.getCost(c, 10)); // provoca eccezione
+        System.out.println(a.getCost(c, 10));
     }
 }

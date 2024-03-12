@@ -1,34 +1,62 @@
 package Java_Collection_Framework;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 
 public class Book {
+
     private String title;
-    private boolean loaned;
-    private Date loanDate;
+    private LocalDateTime loanDate;
 
     public Book(String title) {
         this.title = title;
-        this.loaned = false;
+    }
+
+    public boolean isLoan() {
+        return loanDate != null;
     }
 
     public String getTitle() {
         return title;
     }
 
-    public boolean isLoaned() {
-        return loaned;
-    }
-
-    public void setLoaned(boolean loaned) {
-        this.loaned = loaned;
-    }
-
-    public Date getLoanDate() {
+    public LocalDateTime getLoanDate() {
         return loanDate;
     }
 
-    public void setLoanDate(Date loanDate) {
+    public void setLoanDate(LocalDateTime loanDate) {
         this.loanDate = loanDate;
     }
+
+    @Override
+    public int hashCode() {
+        final int prime = 31;
+        int result = 1;
+        result = prime * result + ((title == null) ? 0 : title.hashCode());
+        return result;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null)
+            return false;
+        if (getClass() != obj.getClass())
+            return false;
+        Book other = (Book) obj;
+        if (title == null) {
+            if (other.title != null)
+                return false;
+        } else if (!title.equals(other.title))
+            return false;
+        return true;
+    }
+
+    @Override
+    public String toString() {
+        return "Book [title=" + title + ", loanDate=" + loanDate + "]";
+    }
+
+
+
 }
